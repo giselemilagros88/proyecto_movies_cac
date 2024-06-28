@@ -5,26 +5,33 @@ import {
   updateUser,
   deleteUser,
 } from "../db/daos/usersDaoMySQL.js";
+import { parseUser } from "../helpers/usersHelper.js";
 
 const getUsers = async (_, res) => {
   const result = await readUsers();
   res.json(result);
 };
 
-const getUser = (req, res) => {
-  res.send(`<h1>User ${req.params.id}</h1>`);
+const getUser = async (req, res) => {
+  const result = await readUser(req.params.id);
+  res.json(result);
 };
 
-const postUser = (_, res) => {
-  res.send("<h1>User created</h1>");
+const postUser = async (req, res) => {
+  const user = parseUser(req.body);
+  const result = await createUser(user);
+  res.json(result);
 };
 
-const putUser = (req, res) => {
-  res.send(`<h1>User ${req.params.id} updated</h1>`);
+const putUser = async (req, res) => {
+  const user = parseUser(req.body);
+  const result = await updateUser(user);
+  res.json(result);
 };
 
-const deletUser = (req, res) => {
-  res.send(`<h1>User ${req.params.id} deleted</h1>`);
+const deletUser = async (req, res) => {
+  const result = await deleteUser(req.params.id);
+  res.json(result);
 };
 
 export { getUsers, getUser, postUser, putUser, deletUser };

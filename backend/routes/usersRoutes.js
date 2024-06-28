@@ -16,6 +16,6 @@ router
 
   .post("/", postUser)
 
-  .put("/:id", putUser)
+  .put("/", putUser)
 
   .delete("/:id", deletUser);
