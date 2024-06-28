@@ -1,30 +1,39 @@
 import {
-  createMovie,
-  readMovies,
-  readMovie,
-  updateMovie,
-  deleteMovie,
-} from "../db/daos/moviesDaoMySQL.js";
-
-const getMovies = async (_, res) => {
-  const result = await readMovies();
-  res.json(result);
-};
-
-const getMovie = (req, res) => {
-  res.send(`<h1>Movie ${req.params.id}</h1>`);
-};
-
-const postMovie = (_, res) => {
-  res.send("<h1>Movie created</h1>");
-};
-
-const putMovie = (req, res) => {
-  res.send(`<h1>Movie ${req.params.id} updated</h1>`);
-};
-
-const deletMovie = (req, res) => {
-  res.send(`<h1>Movie ${req.params.id} deleted</h1>`);
-};
-
-export { getMovies, getMovie, postMovie, putMovie, deletMovie };
+    createMovie,
+    readMovies,
+    readMovie,
+    updateMovie,
+    deleteMovie,
+  } from "../db/daos/moviesDaoMySQL.js";
+  import { parseMovie, parsePartialMovie } from "../helpers/moviesHelper.js";
+  
+  const getMovies = async (_, res) => {
+    const result = await readMovies();
+    res.json(result);
+  };
+  
+  const getMovie = async (req, res) => {
+    const result = await readMovie(req.params.id);
+    res.json(result);
+  };
+  
+  const postMovie = async (req, res) => {
+    const movie = parseMovie(req.query);
+    const result = await createMovie(movie);
+    res.json(result);
+  };
+  
+  const putMovie = async (req, res) => {
+    const movie = parsePartialMovie(req.query);
+    movie.id = req.params.id;
+    const result = await updateMovie(movie);
+    res.json(result);
+  };
+  
+  const deletMovie = async (req, res) => {
+    const result = await deleteMovie(req.params.id);
+    res.json(result);
+  };
+  
+  export { getMovies, getMovie, postMovie, putMovie, deletMovie };
+  
