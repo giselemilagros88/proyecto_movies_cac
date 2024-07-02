@@ -26,5 +26,3 @@ export const parseMovie = (data) => {
     return movie;
   };
   
-  
-  

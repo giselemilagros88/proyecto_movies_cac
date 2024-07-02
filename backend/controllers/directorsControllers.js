@@ -8,7 +8,6 @@ import {
   import { parseDirector, parsePartialDirector } from "../helpers/directorsHelper.js";
   
   const getDirectors = async (_, res) => {
-    console.log("1111111111111111111111");
     const result = await readDirectors();
     res.json(result);
   };
