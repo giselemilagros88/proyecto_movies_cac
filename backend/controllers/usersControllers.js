@@ -1,5 +1,4 @@
 import {
-  createUser,
   readUsers,
   readUser,
   updateUser,
@@ -17,12 +16,6 @@ const getUser = async (req, res) => {
   res.json(result);
 };
 
-const postUser = async (req, res) => {
-  const user = parseUser(req.body);
-  const result = await createUser(user);
-  res.json(result);
-};
-
 const putUser = async (req, res) => {
   const user = parseUser(req.body);
   const result = await updateUser(user);
@@ -34,4 +27,4 @@ const deletUser = async (req, res) => {
   res.json(result);
 };
 
-export { getUsers, getUser, postUser, putUser, deletUser };
+export { getUsers, getUser, putUser, deletUser };

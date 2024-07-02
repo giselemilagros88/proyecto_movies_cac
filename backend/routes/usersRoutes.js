@@ -2,19 +2,17 @@ import { Router } from "express";
 import {
   getUsers,
   getUser,
-  postUser,
   putUser,
   deletUser,
 } from "../controllers/usersControllers.js";
+import { authJWT } from "../middlewares/authMiddleware.js";
 
 export const router = Router();
 
 router
-  .get("/", getUsers)
+  .get("/", authJWT, getUsers)
 
   .get("/:id", getUser)
-
-  .post("/", postUser)
 
   .put("/", putUser)
 

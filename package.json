@@ -12,7 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.10.1",
     "nodemon": "^3.1.4"
   }

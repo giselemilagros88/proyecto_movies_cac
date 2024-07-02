@@ -18,6 +18,12 @@ const readUser = async (id) => {
   return result;
 };
 
+const readUserByEmail = async (email) => {
+  const query = `SELECT * FROM Users WHERE email = "${email}"`;
+  const [result] = await connection.promise().query(query);
+  return result;
+};
+
 const updateUser = async (user) => {
   const query = `UPDATE Users SET name = "${user.name}", last_name = "${user.last_name}", email = "${user.email}", password = "${user.password}", birthday = "${user.birthday}", country = "${user.country}", isAdmin = ${user.isAdmin} WHERE id = ${user.id}`;
   const [result] = await connection.promise().query(query);
@@ -30,4 +36,11 @@ const deleteUser = async (id) => {
   return result;
 };
 
-export { createUser, readUsers, readUser, updateUser, deleteUser };
+export {
+  createUser,
+  readUsers,
+  readUser,
+  readUserByEmail,
+  updateUser,
+  deleteUser,
+};
