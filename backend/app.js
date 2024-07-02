@@ -5,6 +5,7 @@ import { router as authRoutes } from "./routes/authRoutes.js";
 import { connection } from "./db/connections/mySQLConnection.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import { config } from "./auth/config/authJWTConfig.js";
 
 const app = express();
 const PORT = 8080;
@@ -14,7 +15,7 @@ app.use(express.static("frontend"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({ origin: `http://localhost:${PORT}`, credentials: true }));
-app.use(cookieParser());
+app.use(cookieParser(config.secretKey));
 
 app.use("/users", usersRoutes);
 app.use("/movies", moviesRoutes);
