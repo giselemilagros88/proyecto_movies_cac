@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión | CAC-MOVIES</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <script
+      src="https://kit.fontawesome.com/f7fb471b65.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  </head>
+  <body class="bodyRegistrarse">
+    <header class="headerRegistrarse">
+      <a class="anclaLogo" href="../index.html">
+        <i class="fas fa-film" aria-hidden="true"></i>
+        <span>CAC-Movies</span>
+      </a>
+    </header>
+    <main id="main" class="main">
+      <section
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        class="seccionRegistrarse"
+      >
+        <!--pongo get ya que en github pages da error el method post-->
+        <form action="/auth/login" method="POST">
+          <h2 class="tituloRegistrarse">Iniciar Sesión</h2>
+          <div>
+            <input type="email" placeholder="Email" id="email" name="email" />
+            <div class="error-text"></div>
+          </div>
+          <div>
+            <input
+              type="password"
+              placeholder="Contraseña"
+              id="password"
+              name="password"
+            />
+            <div class="error-text"></div>
+          </div>
+          <div>
+            <input class="boton" type="submit" value="Iniciar Sesión" />
+          </div>
+          <div>
+            <a id="ayuda" class="ayuda" href="registrarse.html">Registrarse</a>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="../js/valida_iniciosesion.js"></script>
+  </body>
+</html>
