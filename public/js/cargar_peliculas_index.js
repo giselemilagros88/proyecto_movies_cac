@@ -26,7 +26,7 @@ const cargarPeliculasTendencia = async (page = 1) => {
                             <h4>The Beekeeper</h4>
                         </div>
                     </div>
-      </a>*/
+    </a>*/
     movies.forEach(movie => {
         // creo el ancla
         const ancla = document.createElement('a');
@@ -52,7 +52,7 @@ const cargarPeliculasTendencia = async (page = 1) => {
         pelicula.appendChild(tituloPelicula);
         tituloPelicula.appendChild(titulo);
         tendenciasContainer.appendChild(ancla);
-      
+    
     });
 
     // Actualizamos el atributo data-page con el número de página actual
@@ -69,8 +69,8 @@ const cargarPeliculasAclamadas = async () => {
     
     // Iteramos sobre cada película obtenida para lograr la estructura de html que pongo a continuación:
     /*<div class="peliculaItem">
-         <img class="imgAclamada" src="./assets/img/aclamada_1.jpg" alt="aclamada_1" loading="lazy">
-      </div>*/
+        <img class="imgAclamada" src="./assets/img/aclamada_1.jpg" alt="aclamada_1" loading="lazy">
+    </div>*/
     movies.forEach(movie => {
         // creo el div peliculaItem
         const peliculaItem = document.createElement('div');

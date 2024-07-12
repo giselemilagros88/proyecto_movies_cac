@@ -1,0 +1,17 @@
+{
+  "name": "proyecto_movies_cac",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Este es un proyecto como parte del trabajo final integrador para el curso de NODE JS de Codo a Codo",
+  "dependencies": {
+    "express": "^4.19.2",
+    "method-override": "^3.0.0"
+  }
+}
