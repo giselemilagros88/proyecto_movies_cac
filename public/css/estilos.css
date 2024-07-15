@@ -15,17 +15,17 @@
 ::-webkit-scrollbar {
     width: 10px;
 }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
     background: rgb(23, 23, 23);
 }
-   
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #9f3647;
 }
-  
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background:#9f3647;
@@ -33,8 +33,8 @@
 body{
     background-color: #181419;
     color:white; 
-     /* scrollbar-color: #9f3647  #181419; /*nuevo
-     scrollbar-width: thin;*/
+/* scrollbar-color: #9f3647  #181419; /*nuevo
+scrollbar-width: thin;*/
 }
 
 /*ESTILOS HEADER PARA ESCRITORIO*/
@@ -88,18 +88,18 @@ body{
                     
                     border-radius: 5px;
                      /* Agregar efecto de botón presionado */
-                     transition: transform 0.3s, box-shadow 0.3s;
-                     &:hover {
-                         background-color: #9f3647;
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover {
+                        background-color: #9f3647;
                         /* transform: scale(0.95);
-                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
-                     }
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
+                    }
                 }
             }
-           
+
         }
     }
-   
+
 }
 /*ESTILOS PARA HEADER MOBILE Y TABLET*/
 
@@ -116,7 +116,7 @@ body{
                 font-weight:700;
             }
             .listaNav{
-               
+            
                 padding:initial;
                 .listaItem{
                     .linkNav{
@@ -126,7 +126,7 @@ body{
                         padding: 0.2rem;
                         
                     }
-                  
+                
                 }
             }
         }
@@ -164,12 +164,12 @@ body{
             font-weight: 700;
             text-decoration: none;
              /* Agregar efecto de botón presionado */
-             transition: transform 0.3s, box-shadow 0.3s;
-             &:hover {
-                 background-color: #9f3647;
-                 transform: scale(0.95);
-                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-             }
+            transition: transform 0.3s, box-shadow 0.3s;
+            &:hover {
+                background-color: #9f3647;
+                transform: scale(0.95);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
         }
     }
     .buscadorPrincipal{
@@ -215,15 +215,15 @@ body{
                 border: 2px solid white;
                 text-align: center;
                  /* Agregar efecto de botón presionado */
-                 transition: transform 0.3s, box-shadow 0.3s;
-                 &:hover {
-                     background-color: #9f3647;
-                     transform: scale(0.95);
-                     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-                 }
+                transition: transform 0.3s, box-shadow 0.3s;
+                &:hover {
+                    background-color: #9f3647;
+                    transform: scale(0.95);
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                }
             }
         }
-       
+    
     }
     .peliculasTendencia{
         width:80%;
@@ -250,15 +250,15 @@ body{
                     overflow: hidden;
                     border-radius: 10px;
                     transition: all 0.5s ease;
-                   
+                
                     .imgTendencia{
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                         border-radius: 10px;
-                       
+                    
                     }
-                  
+                
                     .tituloPelicula{
                         z-index: 2;
                         position: absolute;
@@ -279,9 +279,9 @@ body{
                         }
                     }
                     &:hover{
-                       box-shadow: 0 0 30px #9f3648cd;
-                       transform: scale(0.9);
-                      
+                    box-shadow: 0 0 30px #9f3648cd;
+                    transform: scale(0.9);
+                    
                     }
                     &:hover .tituloPelicula{
                         width: 100%;
@@ -296,10 +296,10 @@ body{
                         padding: 0.5rem;
                         opacity: 1;
                     }
-                 
+                
                 }
             }
-          
+        
         }
         .boton{
             border: 1px solid white;
@@ -315,12 +315,12 @@ body{
             text-decoration: none;
             margin-bottom:60px;
              /* Agregar efecto de botón presionado */
-             transition: transform 0.3s, box-shadow 0.3s;
-             &:hover {
-                 background-color: #9f3647;
-                 transform: scale(0.95);
-                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-             }
+            transition: transform 0.3s, box-shadow 0.3s;
+            &:hover {
+                background-color: #9f3647;
+                transform: scale(0.95);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
 
         }
     }
@@ -353,7 +353,7 @@ body{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-               
+            
                 .imgAclamada{
                     border-radius: 5%;
                     width: 95%;
@@ -362,11 +362,11 @@ body{
                 }
                 
             }
-           
+        
         
         }
     }
-   
+
 }
 
 @media (max-width: 768px) {
@@ -411,23 +411,23 @@ body{
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-              
+            
                 a{
                     width: 100%;
                     .pelicula{
                         width: 100%;
                         height: 500px;
-                       
+                    
                         .tituloPelicula{
                             h4 {
                                 font-size: 1rem;
                             }
                         }
-                       
+                    
                     }
                 }
-              
-               
+            
+            
             }
             .boton{
                 padding: 0.8rem 0.8rem;
@@ -509,7 +509,7 @@ body{
         padding-bottom: 20px;
         .listaNav{
             flex-direction: column;
-           
+        
             row-gap: 15px;
             .listaItem{
                 
@@ -542,14 +542,14 @@ body{
             color: #ffffff;
             font-weight: 700;
             font-size: 1.2rem;
-             /*animacion hover*/
+            /*animacion hover*/
             &:hover{
                 animation: tilt-n-move-shaking 0.25s infinite;
             }
         }
     }
     .main{
-         /*seccion de registrarse.html*/
+        /*seccion de registrarse.html*/
         .seccionRegistrarse{
             background-color:rgb(42, 42, 42);
             width: 30%;
@@ -592,7 +592,7 @@ body{
                     margin-top:0px;
                     margin-bottom: 10px;
                 }
-              
+            
                 .terminos{
                     font-size: 0.8rem;
                     display: flex;
@@ -612,7 +612,7 @@ body{
                     border-radius: 5px;
                     font-size: 1rem;
                     font-weight: 500;
-                   
+                
                 }
                 .ayuda{
                     margin-top:40px;
@@ -620,12 +620,12 @@ body{
                     text-decoration: none;
                     color: #787878;
                     font-weight:400;
-                   
+                
                 }
             }
-           
+        
         }
-   
+
     }
 }
 
@@ -647,10 +647,10 @@ body{
                 .tituloRegistrarse{
                     font-size: 2rem;
                 }
-               form{
+                form{
                 width: 100%;
                 text-align: center;
-               
+            
                 input:not(.check,.boton),select{
                     width: 80%;
                     height: 35px;
@@ -672,8 +672,8 @@ body{
                     text-align: left;
                     font-size: 0.8rem;
                 }
-               }
-               
+            }
+            
             }
         }
     }
@@ -697,7 +697,7 @@ body{
             align-items: center;
             column-gap: 60px;
             img{
-              border-radius: 20px;
+            border-radius: 20px;
             }
             .textoDetalle{
                 h1{
@@ -716,7 +716,7 @@ body{
         }
         
         
-       
+    
     }
     .trailer{
         padding-top:150px;
@@ -742,7 +742,7 @@ body{
                             margin-right: 50px;
                         }
                     }
-                  
+                
                 }
             }
             .info{
@@ -811,7 +811,7 @@ body{
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
-                       
+                    
                         li{
                             a{
                                 font-size: 2rem;

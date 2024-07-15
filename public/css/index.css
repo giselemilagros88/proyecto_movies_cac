@@ -1,0 +1,10 @@
+/*importar en cascada.. debe ser en orden 
+partials
+
+pages... tiene un archivo por cada pagina*/
+
+
+
+/* y luego importar todas las paginas de CSS con 
+
+@import url('./partials/header.css'); */
