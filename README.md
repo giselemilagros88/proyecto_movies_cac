@@ -14,4 +14,4 @@ Este es un proyecto como parte del trabajo final integrador para el curso de NOD
 - Express JS
 - MySQL
 
-__Autor/a:__ Diego González cursando NODE JS
+__Autor/a:__ Diego González cursando NODE JS, 1er Cuatriestre 2024.

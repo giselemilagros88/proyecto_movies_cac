@@ -13,8 +13,14 @@ router.post("/pages/registrarse", (req, res) => {
   res.send(__dirname + "./public/pages/registrarse.html");
 });
 
-router.post("/pages", (req, res) => {console.log('Ruta para crear un pages');});
-router.put("/pages", (req, res) => {console.log('Ruta para modificar un pages');});
-router.delete("/pages", (req, res) => {console.log('Ruta para borrar un pages')}); 
+router.post("/pages", (req, res) => {
+  console.log("Ruta para crear un pages");
+});
+router.put("/pages", (req, res) => {
+  console.log("Ruta para modificar un pages");
+});
+router.delete("/pages", (req, res) => {
+  console.log("Ruta para borrar un pages");
+});
 
 module.exports = router;
